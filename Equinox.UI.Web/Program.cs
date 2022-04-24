@@ -1,16 +1,37 @@
+using NetDevPack.Identity;
+using NetDevPack.Identity.User;
+using Equinox.Infra.CrossCutting.Identity;
+using Equinox.UI.Web.Configurations;
+using Microsoft.AspNetCore.Mvc;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+// ConfigureServices
+
+builder.Services.AddControllersWithViews(options =>
+{
+    options.Filters.Add(new AutoValidateAntiforgeryTokenAttribute());
+});
+
 builder.Services.AddRazorPages();
+
+// Setting DBContexts
+builder.Services.AddDatabaseConfiguration(builder.Configuration);
+
+// ASP.NET Identity Settings
+builder.Services.AddWebAppIdentityConfiguration(builder.Configuration);
+
+// Authentication & Authorization
+builder.Services.AddSocialAuthenticationConfiguration(builder.Configuration);
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+// Configure
+
 if (!app.Environment.IsDevelopment())
 {
-    app.UseExceptionHandler("/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-    app.UseHsts();
+    app.UseDeveloperExceptionPage();
+    app.UseMigrationsEndPoint();
 }
 
 app.UseHttpsRedirection();
@@ -18,7 +39,8 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
-app.UseAuthorization();
+// NetDevPack.Identity dependency
+app.UseAuthConfiguration();
 
 app.MapControllerRoute(
     name: "default",
