@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32407.343
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1_Presentacion", "1_Presentacion", "{5102C3B1-04BC-4F04-B892-3230A0846C67}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2_Services", "2_Services", "{B482FDF1-3996-47B7-AECF-CE72A3C60649}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4_Domain", "4_Domain", "{374D48C0-625C-4E3E-998E-94DCE81BF7CF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5_Infra", "5_Infra", "{3E06E50E-95F0-489F-94A2-5F2C626713F2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3_Application", "3_Application", "{C63EC03B-8FD2-4C37-84BE-349747FAF5C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Equinox.UI.Web", "Equinox.UI.Web\Equinox.UI.Web.csproj", "{262E01C7-CF90-447F-A5D4-B9A080C30BE1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{262E01C7-CF90-447F-A5D4-B9A080C30BE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{262E01C7-CF90-447F-A5D4-B9A080C30BE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{262E01C7-CF90-447F-A5D4-B9A080C30BE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{262E01C7-CF90-447F-A5D4-B9A080C30BE1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{262E01C7-CF90-447F-A5D4-B9A080C30BE1} = {5102C3B1-04BC-4F04-B892-3230A0846C67}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DE42BB49-6E45-4777-8BDA-DA91BBDF1A58}
+	EndGlobalSection
+EndGlobal
